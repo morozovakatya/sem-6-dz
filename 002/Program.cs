@@ -32,7 +32,7 @@ double k2 = GetValue("Введите число k2: ");
 double b1 = GetValue("Введите число b1: ");
 double b2 = GetValue("Введите число b2: ");
 
-double x = GetFirstDot(k2, b1, b2); 
+double x = GetFirstDot(k1, k2, b1, b2); 
 double y = GetSecondDot(k2, x, b2);
 
 Console.WriteLine ($" --> {x}, {y}");
