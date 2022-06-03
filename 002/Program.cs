@@ -13,16 +13,16 @@ double GetValue(string message)
     return value;
 }
 
-double GetFirstDot( double x, double k1, double k2, double b1, double b2)
+double GetFirstDot(double k1, double k2, double b1, double b2)
 {
-  x = (b2 - b1) / (k1 - k2);  
+  double x = (b2 - b1) / (k1 - k2);  
   return x;
 }
 
 
-double GetSecondDot(double y, double k2, double x, double b2)
+double GetSecondDot( double k2, double x, double b2)
 {
-   y = k2 * x + b2;
+   double y = k2 * x + b2;
    return y;
 }
 
@@ -32,7 +32,7 @@ double k2 = GetValue("Введите число k2: ");
 double b1 = GetValue("Введите число b1: ");
 double b2 = GetValue("Введите число b2: ");
 
-double x = GetFirstDot(k1, k2, b1, b2);
+double x = GetFirstDot(k2, b1, b2); 
 double y = GetSecondDot(k2, x, b2);
 
 Console.WriteLine ($" --> {x}, {y}");
